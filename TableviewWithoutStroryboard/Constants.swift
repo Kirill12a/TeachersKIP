@@ -10,8 +10,12 @@ import UIKit
 
 enum Constants{
     enum Image{
-        static let doctor = UIImage(named: "manDoctor")
-        static let koval  = UIImage(named: "manKoval")
-        static let turin  = UIImage(named: "womTurin")
+        static let doctor  = UIImage(named: "man")
+        static let koval   = UIImage(named: "manO")
+        static let turin   = UIImage(named: "manR")
+        static let doctorT = UIImage(named: "womanT")
+        static let kovaTl  = UIImage(named: "womanU")
+        static let turiTn  = UIImage(named: "womanY")
+        
     }
 }

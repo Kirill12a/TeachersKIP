@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect.zero, style: .grouped)
 
+
        return tableView
     }()
         
@@ -45,7 +46,23 @@ class ViewController: UIViewController {
                          ),
         
         ModelDataTeachers(   image  : Constants.Image.turin!,
-                             name   : "Тимонова",
+                             name   : "Тимонова A.В",
+                             subject: "Информатика",
+                             rating : "5.0"
+                         ),
+        ModelDataTeachers(   image  :  Constants.Image.doctorT!,
+                             name   :  "Аканов А.Н",
+                             subject:  "Физика", rating: "3.3"
+                         ),
+        
+        ModelDataTeachers(   image  : Constants.Image.kovaTl!,
+                             name   : "Одигов И.В",
+                             subject: "Базы данных",
+                             rating : "4.0"
+                         ),
+        
+        ModelDataTeachers(   image  : Constants.Image.turiTn!,
+                             name   : "Диков Л.М",
                              subject: "Информатика",
                              rating : "5.0"
                          ),]
