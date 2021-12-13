@@ -18,6 +18,8 @@
 		D26F7DF027665936009467B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DEF27665936009467B4 /* Constants.swift */; };
 		D26F7DF227665D7A009467B4 /* CellWithTeachers.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26F7DF127665D7A009467B4 /* CellWithTeachers.xib */; };
 		D26F7DF52766600F009467B4 /* CellWithTeachers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF42766600F009467B4 /* CellWithTeachers.swift */; };
+		D26F7DF727673869009467B4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF627673869009467B4 /* UserData.swift */; };
+		D26F7DFA27673D54009467B4 /* PreferencesTeacherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF827673D54009467B4 /* PreferencesTeacherVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		D26F7DEF27665936009467B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D26F7DF127665D7A009467B4 /* CellWithTeachers.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellWithTeachers.xib; sourceTree = "<group>"; };
 		D26F7DF42766600F009467B4 /* CellWithTeachers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithTeachers.swift; sourceTree = "<group>"; };
+		D26F7DF627673869009467B4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		D26F7DF827673D54009467B4 /* PreferencesTeacherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTeacherVC.swift; sourceTree = "<group>"; };
 		E153F531AAE689FF23F9B5C2 /* Pods_TableviewWithoutStroryboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableviewWithoutStroryboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,11 +94,11 @@
 			children = (
 				D26F7DEC27665743009467B4 /* View */,
 				D26F7DEB2766573C009467B4 /* Model */,
-				D26F7DE927665723009467B4 /* DelegateApp */,
 				D26F7DEA27665733009467B4 /* Controller */,
 				D26F7DDD2766560C009467B4 /* Assets.xcassets */,
 				D26F7DE22766560C009467B4 /* Info.plist */,
 				D26F7DEF27665936009467B4 /* Constants.swift */,
+				D26F7DE927665723009467B4 /* DelegateApp */,
 			);
 			path = TableviewWithoutStroryboard;
 			sourceTree = "<group>";
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				D26F7DD82766560A009467B4 /* ViewController.swift */,
+				D26F7DF827673D54009467B4 /* PreferencesTeacherVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				D26F7DED276658B5009467B4 /* ModelDataTeachers.swift */,
+				D26F7DF627673869009467B4 /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,7 +267,9 @@
 			files = (
 				D26F7DF52766600F009467B4 /* CellWithTeachers.swift in Sources */,
 				D26F7DF027665936009467B4 /* Constants.swift in Sources */,
+				D26F7DF727673869009467B4 /* UserData.swift in Sources */,
 				D26F7DEE276658B5009467B4 /* ModelDataTeachers.swift in Sources */,
+				D26F7DFA27673D54009467B4 /* PreferencesTeacherVC.swift in Sources */,
 				D26F7DD92766560A009467B4 /* ViewController.swift in Sources */,
 				D26F7DD52766560A009467B4 /* AppDelegate.swift in Sources */,
 				D26F7DD72766560A009467B4 /* SceneDelegate.swift in Sources */,

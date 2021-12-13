@@ -16,6 +16,5 @@ enum Constants{
         static let doctorT = UIImage(named: "womanT")
         static let kovaTl  = UIImage(named: "womanU")
         static let turiTn  = UIImage(named: "womanY")
-        
     }
 }

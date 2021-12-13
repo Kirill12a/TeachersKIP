@@ -10,64 +10,22 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-  
-    
-    
+    var dataWithTeachers = UserData.dataWithTeachers
     private let cellIdentifire = "cellID"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         tableView.register(UINib(nibName: "CellWithTeachers", bundle: nil), forCellReuseIdentifier: cellIdentifire)
         setupView()
         setupConstraints()
-        
     }
     
         //MARK: Таблица
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect.zero, style: .grouped)
-
-
        return tableView
     }()
         
-    
-    var dataWithTeachers: [ModelDataTeachers] = [
-        ModelDataTeachers(   image  :  Constants.Image.doctor!,
-                             name   :  "Дектров А.В",
-                             subject:  "Физика", rating: "4.3"
-                         ),
-        
-        ModelDataTeachers(   image  : Constants.Image.koval!,
-                             name   : "Кавальский И.В",
-                             subject: "Базы данных",
-                             rating : "4.0"
-                         ),
-        
-        ModelDataTeachers(   image  : Constants.Image.turin!,
-                             name   : "Тимонова A.В",
-                             subject: "Информатика",
-                             rating : "5.0"
-                         ),
-        ModelDataTeachers(   image  :  Constants.Image.doctorT!,
-                             name   :  "Аканов А.Н",
-                             subject:  "Физика", rating: "3.3"
-                         ),
-        
-        ModelDataTeachers(   image  : Constants.Image.kovaTl!,
-                             name   : "Одигов И.В",
-                             subject: "Базы данных",
-                             rating : "4.0"
-                         ),
-        
-        ModelDataTeachers(   image  : Constants.Image.turiTn!,
-                             name   : "Диков Л.М",
-                             subject: "Информатика",
-                             rating : "5.0"
-                         ),]
-    
-    
     private func setupView(){
         view.addSubview(tableView)
         tableView.delegate = self
@@ -88,12 +46,10 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifire) as? CellWithTeachers
-        
         cell?.teacherImage.image = dataWithTeachers[indexPath.row].image
         cell?.teacherName.text = dataWithTeachers[indexPath.row].name
         cell?.teacherObjects.text = dataWithTeachers[indexPath.row].subject
         cell?.teacherRating.text = dataWithTeachers[indexPath.row].rating
-        
         return cell ?? UITableViewCell()
     }
 }
@@ -105,6 +61,27 @@ extension ViewController: UITableViewDelegate{
         print(dataWithTeachers[indexPath.row].rating)
         print(dataWithTeachers[indexPath.row].subject)
         print(dataWithTeachers[indexPath.row].name)
+        
+        let rootVc = SecondViewController()
+        rootVc.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Exit", style: .plain, target: self, action: #selector(dismis))
+//        rootVc.title = "\(dataWithTeachers[indexPath.row].name)"
+        let navVC = UINavigationController(rootViewController: rootVc)
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true, completion: nil)
+    }
+                                                                   
+        @objc private func dismis(){
+            dismiss(animated: true, completion: nil)
+            
+        }
+}
 
+
+
+class SecondViewController: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        title = "Teachers"
     }
 }
