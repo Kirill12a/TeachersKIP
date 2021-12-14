@@ -14,39 +14,32 @@ class PreferencesTeacherVC: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             view.backgroundColor = .white
-//            view.addSubview(button)
-//            button.setTitle(value, for: .normal)
             initilize()
             
         }
-//
+    
+  
     var value: String?
-//    private lazy var button: UIButton = {
-////        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-//        let button = UIButton()
-//        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-//
-//        button.backgroundColor = .black
-//        button.tintColor = .red
-//
-//        view.addSubview(button)
-//        return button
-//    }()
-//    @objc private func buttonTapped(){
-//        print("Hello")
-//    }
-    
-    
-    
+    var imageNamed: String?
+    let isPortrait = UIDevice.current.orientation.isPortrait
+
     private func initilize(){
+        
+        let imageTeacher = UIImageView()
+        guard let imageNamed = imageNamed else {return}
+        imageTeacher.image = UIImage(named: imageNamed)
+
+        
+        
+        
         let label = UILabel()
         label.text = "HEllO"
+        
         view.addSubview(label)
         label.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(50)
             make.top.equalToSuperview().inset(100)
         }
-        
         
         let button = UIButton(type: .system)
         button.addTarget(self, action: #selector(sayHello), for: .touchUpInside)
@@ -57,18 +50,12 @@ class PreferencesTeacherVC: UIViewController {
         button.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(100)
             make.top.equalToSuperview().inset(150)
-            
-        }
-        
-       
-        
+            }
         }
     
     @objc func sayHello(){
         print("Hello")
     }
-        
-    
 }
 
 
