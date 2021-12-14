@@ -47,13 +47,16 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifire) as? CellWithTeachers
         cell?.teacherImage.image = dataWithTeachers[indexPath.row].image
+
         cell?.teacherName.text = dataWithTeachers[indexPath.row].name
         cell?.teacherObjects.text = dataWithTeachers[indexPath.row].subject
         cell?.teacherRating.text = dataWithTeachers[indexPath.row].rating
+        cell?.selectionStyle = .none // удаление серго цвета при нажатие 
+         
+
         return cell ?? UITableViewCell()
     }
 }
-
 
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -61,27 +64,23 @@ extension ViewController: UITableViewDelegate{
         print(dataWithTeachers[indexPath.row].rating)
         print(dataWithTeachers[indexPath.row].subject)
         print(dataWithTeachers[indexPath.row].name)
+    
+        let rootVc = PreferencesTeacherVC()
         
-        let rootVc = SecondViewController()
         rootVc.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Exit", style: .plain, target: self, action: #selector(dismis))
-//        rootVc.title = "\(dataWithTeachers[indexPath.row].name)"
+        
+        rootVc.title = "Учитель: \(dataWithTeachers[indexPath.row].name)"
+        rootVc.value = "\(dataWithTeachers[indexPath.row].subject)"
+        
         let navVC = UINavigationController(rootViewController: rootVc)
         navVC.modalPresentationStyle = .fullScreen
+        
         present(navVC, animated: true, completion: nil)
     }
-                                                                   
         @objc private func dismis(){
             dismiss(animated: true, completion: nil)
-            
         }
 }
 
 
 
-class SecondViewController: UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Teachers"
-    }
-}
