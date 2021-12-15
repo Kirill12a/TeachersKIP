@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct ModelDataTeachers{
-    let image: UIImage
+    let image: String
     let name: String
     let subject: String
     let rating: String

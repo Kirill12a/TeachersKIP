@@ -8,12 +8,15 @@
 import UIKit
 import SnapKit
 
+// сделать чтобы картинки норм передавались, проблема видимо с тем что я передаю string
+
 class ViewController: UIViewController {
     
     var dataWithTeachers = UserData.dataWithTeachers
     private let cellIdentifire = "cellID"
 
     override func viewDidLoad() {
+        print("Pfehrf")
         super.viewDidLoad()
         tableView.register(UINib(nibName: "CellWithTeachers", bundle: nil), forCellReuseIdentifier: cellIdentifire)
         setupView()
@@ -46,7 +49,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifire) as? CellWithTeachers
-        cell?.teacherImage.image = dataWithTeachers[indexPath.row].image
+//        cell?.teacherImage.image = dataWithTeachers[indexPath.row].image
+        cell?.teacherImage.image = UIImage(named: dataWithTeachers[indexPath.row].image)
 
         cell?.teacherName.text = dataWithTeachers[indexPath.row].name
         cell?.teacherObjects.text = dataWithTeachers[indexPath.row].subject
@@ -69,10 +73,14 @@ extension ViewController: UITableViewDelegate{
         
         rootVc.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Exit", style: .plain, target: self, action: #selector(dismis))
         
-        rootVc.title = "Учитель: \(dataWithTeachers[indexPath.row].name)"
-        rootVc.value = "\(dataWithTeachers[indexPath.row].subject)"
+        rootVc.title = "Учитель: \(dataWithTeachers[indexPath.row].name)" // тайтл на втором экране
+        rootVc.value = "\(dataWithTeachers[indexPath.row].subject)" // хз удалить потом
+        rootVc.nameTeacher = "\(dataWithTeachers[indexPath.row].name)" // имя препода в переменную
+        rootVc.imageNamed = "\(dataWithTeachers[indexPath.row].image)" // херня не робит
+        
         
         let navVC = UINavigationController(rootViewController: rootVc)
+        
         navVC.modalPresentationStyle = .fullScreen
         
         present(navVC, animated: true, completion: nil)
