@@ -8,8 +8,6 @@
 import UIKit
 import SnapKit
 
-// сделать чтобы картинки норм передавались, проблема видимо с тем что я передаю string
-
 class ViewController: UIViewController {
     
     var dataWithTeachers = UserData.dataWithTeachers
