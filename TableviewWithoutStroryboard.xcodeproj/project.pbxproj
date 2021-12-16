@@ -95,9 +95,9 @@
 				D26F7DEC27665743009467B4 /* View */,
 				D26F7DEB2766573C009467B4 /* Model */,
 				D26F7DEA27665733009467B4 /* Controller */,
-				D26F7DDD2766560C009467B4 /* Assets.xcassets */,
+				D2A5C120276B052D003038CC /* Image */,
 				D26F7DE22766560C009467B4 /* Info.plist */,
-				D26F7DEF27665936009467B4 /* Constants.swift */,
+				D2A5C121276B053B003038CC /* Constants */,
 				D26F7DE927665723009467B4 /* DelegateApp */,
 			);
 			path = TableviewWithoutStroryboard;
@@ -147,6 +147,22 @@
 				D26F7DF42766600F009467B4 /* CellWithTeachers.swift */,
 			);
 			path = CellTableView;
+			sourceTree = "<group>";
+		};
+		D2A5C120276B052D003038CC /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				D26F7DDD2766560C009467B4 /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		D2A5C121276B053B003038CC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D26F7DEF27665936009467B4 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
