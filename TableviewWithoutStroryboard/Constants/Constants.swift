@@ -16,5 +16,5 @@ enum Constants{
         static let doctorT = "womanT"
         static let kovaTl  = "womanU"
         static let turiTn  = "womanY"
-    }
+    } // картинки таблицы
 }

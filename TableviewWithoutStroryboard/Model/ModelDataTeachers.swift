@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 struct ModelDataTeachers{
-    let image: String
-    let name: String
-    let subject: String
-    let rating: String
+    let image    : String
+    let name      : String
+    let subject : String
+    let rating   : String
 }

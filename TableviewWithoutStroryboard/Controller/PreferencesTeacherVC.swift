@@ -18,10 +18,9 @@ class PreferencesTeacherVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initilize()
-
     }
     
-    //MARK: Varibals
+    //MARK: Varibals // переменные делегата данных 
     var value: String?
     var imageNamed: String?
     var nameTeacher: String?
@@ -86,6 +85,19 @@ class PreferencesTeacherVC: UIViewController {
             make.height.equalTo(21)
             make.width.equalTo(115)
         }
+        
+        
+        let teacher  =  UILabel() // это лейбл с описанием препола
+        teacher.text =  "nameTeacher"
+        view.addSubview(teacher)
+        teacher.snp.makeConstraints { make in
+            make.top.equalTo(imageTeachers).inset(40)
+            make.height.equalTo(300)
+            make.width.equalTo(300)
+            make.centerX.equalToSuperview() // по центу
+            make.top.equalToSuperview().inset(view.bounds.height / 2) // и вниз
+        }
+   
     }
     
     @objc func sayHello(){ // нажатие на кнопку
