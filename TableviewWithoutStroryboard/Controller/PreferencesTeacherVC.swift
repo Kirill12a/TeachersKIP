@@ -20,7 +20,7 @@ class PreferencesTeacherVC: UIViewController {
         initilize()
     }
     
-    //MARK: Varibals // переменные делегата данных 
+    //MARK: Varibals // переменные делегата данных
     var value: String?
     var imageNamed: String?
     var nameTeacher: String?
@@ -69,8 +69,6 @@ class PreferencesTeacherVC: UIViewController {
         }
         imageAccountTeacher.layer.cornerRadius = 30
         
-        
-        
         let imageTeachers: UIImageView = {
             let img                    = UIImageView()
             img.image                  = UIImage.init(named: "Stars")
@@ -87,18 +85,40 @@ class PreferencesTeacherVC: UIViewController {
         }
         
         
-        let teacher  =  UILabel() // это лейбл с описанием препола
-        teacher.text =  "nameTeacher"
-        view.addSubview(teacher)
-        teacher.snp.makeConstraints { make in
-            make.top.equalTo(imageTeachers).inset(40)
-            make.height.equalTo(300)
-            make.width.equalTo(300)
-            make.centerX.equalToSuperview() // по центу
-            make.top.equalToSuperview().inset(view.bounds.height / 2) // и вниз
+        let deceitTeacher  =  UILabel() // это лейбл с описанием препода
+        deceitTeacher.text =  "\("Списать: Сложно " ?? "none")"
+        deceitTeacher.textAlignment = .center
+        deceitTeacher.font = .boldSystemFont(ofSize: 18)
+        view.addSubview(deceitTeacher)
+        deceitTeacher.snp.makeConstraints { make in
+//            make.top.equalTo(imageTeachers).inset(40)
+//            make.height.equalTo(300)
+//            make.width.equalTo(300)
+//            make.centerX.equalToSuperview() // по центу
+//            make.top.equalToSuperview().inset(view.bounds.height / 2) // и вниз
+            
+            make.top.equalTo(view.bounds.height / 2 - 190)
+//            make.left.equalTo(view.bounds.width / 2 )
+            make.width.height.equalTo(250)
+            make.centerX.equalToSuperview()
         }
-   
+        
+        let homeWorkteacher = UILabel()
+        homeWorkteacher.text = "\("ДЗ: Можно ничего не делать")"
+        homeWorkteacher.font = .boldSystemFont(ofSize: 18)
+        homeWorkteacher.textAlignment = .center
+        homeWorkteacher.numberOfLines = 0
+        view.addSubview(homeWorkteacher)
+        homeWorkteacher.snp.makeConstraints { make in
+            make.top.equalTo(deceitTeacher.snp_topMargin).inset(30)
+            make.width.height.equalTo(250)
+            make.centerX.equalToSuperview()
+        }
+        
     }
+    
+    
+    
     
     @objc func sayHello(){ // нажатие на кнопку
         print("Hello")
@@ -108,3 +128,6 @@ class PreferencesTeacherVC: UIViewController {
         super.viewDidLayoutSubviews()
     }
 }
+
+
+

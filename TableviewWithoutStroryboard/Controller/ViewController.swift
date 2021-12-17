@@ -55,7 +55,6 @@ extension ViewController: UITableViewDataSource {
         cell?.teacherRating.text = dataWithTeachers[indexPath.row].rating
         cell?.selectionStyle = .none // удаление серго цвета при нажатие 
          
-
         return cell ?? UITableViewCell()
     }
 }
@@ -75,18 +74,18 @@ extension ViewController: UITableViewDelegate{
         rootVc.value = "\(dataWithTeachers[indexPath.row].subject)" // хз удалить потом
         rootVc.nameTeacher = "\(dataWithTeachers[indexPath.row].name)" // имя препода в переменную
         rootVc.imageNamed = "\(dataWithTeachers[indexPath.row].image)" // херня не робит
-        
-        
+    
         let navVC = UINavigationController(rootViewController: rootVc)
-        
         navVC.modalPresentationStyle = .fullScreen
-        
         present(navVC, animated: true, completion: nil)
     }
+    
         @objc private func dismis(){
             dismiss(animated: true, completion: nil)
         }
 }
+
+
 
 
 
