@@ -28,13 +28,7 @@ class PreferencesTeacherVC: UIViewController {
     
     private func initilize(){
         
-        let NameTeacher  =  UILabel()
-        NameTeacher.text =  nameTeacher
-        view.addSubview(NameTeacher)
-        NameTeacher.snp.makeConstraints { make in
-            make.centerX.equalToSuperview() // по центу
-            make.top.equalToSuperview().inset(view.bounds.height / 2) // и вниз
-        }
+      
         // ниже будет collectionView
         
         let button = UIButton(type: .system)
@@ -110,7 +104,20 @@ class PreferencesTeacherVC: UIViewController {
         homeWorkteacher.numberOfLines = 0
         view.addSubview(homeWorkteacher)
         homeWorkteacher.snp.makeConstraints { make in
-            make.top.equalTo(deceitTeacher.snp_topMargin).inset(30)
+            make.top.equalTo(deceitTeacher.snp_topMargin).inset(40)
+            make.width.height.equalTo(250)
+            make.centerX.equalToSuperview()
+        }
+        
+        
+        let characterTeacher  =  UILabel()
+        characterTeacher.text =  "\("Характер: Добрый, но не надо дерзить")"
+        characterTeacher.font = .boldSystemFont(ofSize: 18)
+        characterTeacher.numberOfLines = 0
+        characterTeacher.textAlignment = .center
+        view.addSubview(characterTeacher)
+        characterTeacher.snp.makeConstraints { make in
+            make.top.equalTo(homeWorkteacher.snp_topMargin).inset(40)
             make.width.height.equalTo(250)
             make.centerX.equalToSuperview()
         }
