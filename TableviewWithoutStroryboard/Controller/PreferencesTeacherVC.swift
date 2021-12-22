@@ -19,12 +19,15 @@ class PreferencesTeacherVC: UIViewController {
         super.viewWillAppear(animated)
         initilize()
     }
+   
+    
     
     //MARK: Varibals // переменные делегата данных
     var value: String?
     var imageNamed: String?
     var nameTeacher: String?
     // ------------------ //
+    
     
     private func initilize(){
         
@@ -85,11 +88,7 @@ class PreferencesTeacherVC: UIViewController {
         deceitTeacher.font = .boldSystemFont(ofSize: 18)
         view.addSubview(deceitTeacher)
         deceitTeacher.snp.makeConstraints { make in
-//            make.top.equalTo(imageTeachers).inset(40)
-//            make.height.equalTo(300)
-//            make.width.equalTo(300)
-//            make.centerX.equalToSuperview() // по центу
-//            make.top.equalToSuperview().inset(view.bounds.height / 2) // и вниз
+
             
             make.top.equalTo(view.bounds.height / 2 - 190)
 //            make.left.equalTo(view.bounds.width / 2 )
@@ -114,6 +113,8 @@ class PreferencesTeacherVC: UIViewController {
         characterTeacher.text =  "\("Характер: Добрый, но не надо дерзить")"
         characterTeacher.font = .boldSystemFont(ofSize: 18)
         characterTeacher.numberOfLines = 0
+//        characterTeacher.backgroundColor = .orange
+        
         characterTeacher.textAlignment = .center
         view.addSubview(characterTeacher)
         characterTeacher.snp.makeConstraints { make in
@@ -121,8 +122,11 @@ class PreferencesTeacherVC: UIViewController {
             make.width.height.equalTo(250)
             make.centerX.equalToSuperview()
         }
+      
         
     }
+    
+    
     
     
     
@@ -138,3 +142,12 @@ class PreferencesTeacherVC: UIViewController {
 
 
 
+
+extension UIView {
+   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}
