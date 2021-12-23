@@ -13,4 +13,8 @@ struct ModelDataTeachers{
     let name      : String
     let subject : String
     let rating   : String
+    let chet: String
+    let nature: String
+    let homeWork: String
+    
 }

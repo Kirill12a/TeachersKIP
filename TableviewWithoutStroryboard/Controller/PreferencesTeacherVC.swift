@@ -23,9 +23,16 @@ class PreferencesTeacherVC: UIViewController {
     
     
     //MARK: Varibals // переменные делегата данных
-    var value: String?
-    var imageNamed: String?
-    var nameTeacher: String?
+    var value: String? //
+    var imageNamed: String? // Картинка
+    var nameTeacher: String? // Имя учителя
+    // еще не юзаю
+    var starCount: String?    // количество звезд
+    var chet: String?        // типо можно списать или нет
+    var nature: String?     // харктер препода
+    var homeWork: String?  // нужно ли делать дз или можно тупо чилить
+    // не робит //
+    
     // ------------------ //
     
     
@@ -48,6 +55,7 @@ class PreferencesTeacherVC: UIViewController {
         let imageAccountTeacher: UIImageView = {
             let img                    = UIImageView()
             img.image                  = UIImage.init(named: imageNamed!)
+
 //            img.backgroundColor        = UIColor(patternImage: UIImage(named: "back Small")!) // фон кипа
             img.backgroundColor        = .red
             img.contentMode            = .scaleAspectFill
@@ -68,8 +76,9 @@ class PreferencesTeacherVC: UIViewController {
         
         let imageTeachers: UIImageView = {
             let img                    = UIImageView()
-            img.image                  = UIImage.init(named: "Stars")
+            img.image                  = UIImage.init(named: starCount ?? String()) //
             img.contentMode            = .scaleAspectFill
+//            img.contentMode = .scaleToFill
             img.clipsToBounds          = true
             return img
         }()
@@ -83,7 +92,7 @@ class PreferencesTeacherVC: UIViewController {
         
         
         let deceitTeacher  =  UILabel() // это лейбл с описанием препода
-        deceitTeacher.text =  "\("Списать: Сложно " ?? "none")"
+        deceitTeacher.text =  "\("Списать: \(chet ?? "")")"
         deceitTeacher.textAlignment = .center
         deceitTeacher.font = .boldSystemFont(ofSize: 18)
         view.addSubview(deceitTeacher)

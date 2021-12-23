@@ -73,7 +73,14 @@ extension ViewController: UITableViewDelegate{
         rootVc.title = "Учитель: \(dataWithTeachers[indexPath.row].name)" // тайтл на втором экране
         rootVc.value = "\(dataWithTeachers[indexPath.row].subject)" // хз удалить потом
         rootVc.nameTeacher = "\(dataWithTeachers[indexPath.row].name)" // имя препода в переменную
-        rootVc.imageNamed = "\(dataWithTeachers[indexPath.row].image)" // херня не робит
+        rootVc.imageNamed = "\(dataWithTeachers[indexPath.row].image)" // Картинка(лицо)
+        rootVc.chet = "\(dataWithTeachers[indexPath.row].chet)" //  Списать
+        rootVc.starCount = "\(dataWithTeachers[indexPath.row].rating)"
+            // еще не робит
+        
+
+    
+        
     
         let navVC = UINavigationController(rootViewController: rootVc)
         navVC.modalPresentationStyle = .fullScreen
@@ -84,6 +91,7 @@ extension ViewController: UITableViewDelegate{
             dismiss(animated: true, completion: nil)
         }
 }
+
 
 
 
