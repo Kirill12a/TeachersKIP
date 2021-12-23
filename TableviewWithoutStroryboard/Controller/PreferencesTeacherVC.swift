@@ -81,6 +81,7 @@ class PreferencesTeacherVC: UIViewController {
 //            img.contentMode = .scaleToFill
             img.clipsToBounds          = true
             return img
+           
         }()
         view.addSubview(imageTeachers)
         imageTeachers.snp.makeConstraints { make in
