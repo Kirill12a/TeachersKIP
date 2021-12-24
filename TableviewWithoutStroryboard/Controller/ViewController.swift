@@ -47,13 +47,13 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifire) as? CellWithTeachers
-//        cell?.teacherImage.image = dataWithTeachers[indexPath.row].image
         cell?.teacherImage.image = UIImage(named: dataWithTeachers[indexPath.row].image)
+        
 
-        cell?.teacherName.text = dataWithTeachers[indexPath.row].name
+        cell?.teacherName.text    = dataWithTeachers[indexPath.row].name
         cell?.teacherObjects.text = dataWithTeachers[indexPath.row].subject
-        cell?.teacherRating.text = dataWithTeachers[indexPath.row].rating
-        cell?.selectionStyle = .none // удаление серго цвета при нажатие 
+        cell?.teacherRating.text  = dataWithTeachers[indexPath.row].rating
+        cell?.selectionStyle      = .none // удаление серго цвета при нажатие
          
         return cell ?? UITableViewCell()
     }
@@ -70,17 +70,14 @@ extension ViewController: UITableViewDelegate{
         
         rootVc.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Exit", style: .plain, target: self, action: #selector(dismis))
         
-        rootVc.title = "Учитель: \(dataWithTeachers[indexPath.row].name)" // тайтл на втором экране
-        rootVc.value = "\(dataWithTeachers[indexPath.row].subject)" // хз удалить потом
-        rootVc.nameTeacher = "\(dataWithTeachers[indexPath.row].name)" // имя препода в переменную
-        rootVc.imageNamed = "\(dataWithTeachers[indexPath.row].image)" // Картинка(лицо)
-        rootVc.chet = "\(dataWithTeachers[indexPath.row].chet)" //  Списать
-        rootVc.starCount = "\(dataWithTeachers[indexPath.row].rating)"
-            // еще не робит
-        
-
-    
-        
+        rootVc.title        =   "Учитель: \(dataWithTeachers[indexPath.row].name)" //     тайтл на втором экране
+        rootVc.value        =   "\(dataWithTeachers[indexPath.row].subject)"      //     хз удалить потом
+        rootVc.nameTeacher  =   "\(dataWithTeachers[indexPath.row].name)"        //     имя препода в переменную
+        rootVc.imageNamed   =   "\(dataWithTeachers[indexPath.row].image)"      //     Картинка(лицо)
+        rootVc.chet         =   "\(dataWithTeachers[indexPath.row].chet)"      //     Списать
+        rootVc.starCount    =   "\(dataWithTeachers[indexPath.row].rating)"   //     Колво звезд
+        rootVc.nature       =   "\(dataWithTeachers[indexPath.row].nature)"
+          
     
         let navVC = UINavigationController(rootViewController: rootVc)
         navVC.modalPresentationStyle = .fullScreen

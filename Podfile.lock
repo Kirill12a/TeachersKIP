@@ -1,16 +1,20 @@
 PODS:
   - SnapKit (5.0.1)
+  - SwiftGifOrigin (1.7.0)
 
 DEPENDENCIES:
   - SnapKit
+  - SwiftGifOrigin (~> 1.7.0)
 
 SPEC REPOS:
   trunk:
     - SnapKit
+    - SwiftGifOrigin
 
 SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: a1a42f05d93dccb94305bcb9e11e235f567b19cb
+PODFILE CHECKSUM: 67b548d3a731299d386c375ea12629b8a0f3ce56
 
 COCOAPODS: 1.11.2
