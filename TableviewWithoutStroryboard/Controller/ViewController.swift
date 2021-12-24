@@ -77,6 +77,7 @@ extension ViewController: UITableViewDelegate{
         rootVc.chet         =   "\(dataWithTeachers[indexPath.row].chet)"      //     Списать
         rootVc.starCount    =   "\(dataWithTeachers[indexPath.row].rating)"   //     Колво звезд
         rootVc.nature       =   "\(dataWithTeachers[indexPath.row].nature)"
+        rootVc.homeWork     =   "\(dataWithTeachers[indexPath.row].homeWork)"
           
     
         let navVC = UINavigationController(rootViewController: rootVc)

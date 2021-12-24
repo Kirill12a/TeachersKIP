@@ -11,12 +11,12 @@ import UIKit
 class UserData {
     static var dataWithTeachers: [ModelDataTeachers] = [
         ModelDataTeachers(   image  :  Constants.Image.doctor,
-                             name   :  "Дектров А.В",
+                             name   :  "Докторов А.А",
                              subject:  "Физика",
-                             rating: "4.0",
-                             chet: "Добрый",
-                             nature: "Дорый",
-                             homeWork: "Нужно делать все"
+                             rating: "4.0", // отвечает еще и за картинку
+                             chet: "Списывать можно, но он на работах он ходит",
+                             nature: "Хороший преподаватель, но бывает и строгий.",
+                             homeWork: "Лучше делать, потому что за него можно получить оценки "
                              
                          ),
         
