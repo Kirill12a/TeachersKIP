@@ -61,23 +61,19 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(dataWithTeachers[indexPath.row].image)
-        print(dataWithTeachers[indexPath.row].rating)
-        print(dataWithTeachers[indexPath.row].subject)
-        print(dataWithTeachers[indexPath.row].name)
-    
         let rootVc = PreferencesTeacherVC()
+        let dataWithTeachersModelData = dataWithTeachers[indexPath.row]
         
-        rootVc.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Exit", style: .plain, target: self, action: #selector(dismis))
+        rootVc.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: self, action: #selector(dismis))
         
-        rootVc.title        =   "Учитель: \(dataWithTeachers[indexPath.row].name)" //     тайтл на втором экране
-        rootVc.value        =   "\(dataWithTeachers[indexPath.row].subject)"      //     хз удалить потом
-        rootVc.nameTeacher  =   "\(dataWithTeachers[indexPath.row].name)"        //     имя препода в переменную
-        rootVc.imageNamed   =   "\(dataWithTeachers[indexPath.row].image)"      //     Картинка(лицо)
-        rootVc.chet         =   "\(dataWithTeachers[indexPath.row].chet)"      //     Списать
-        rootVc.starCount    =   "\(dataWithTeachers[indexPath.row].rating)"   //     Колво звезд
-        rootVc.nature       =   "\(dataWithTeachers[indexPath.row].nature)"
-        rootVc.homeWork     =   "\(dataWithTeachers[indexPath.row].homeWork)"
+        rootVc.title        =   "Учитель:\(dataWithTeachersModelData.name)" //     тайтл на втором экране
+        rootVc.value        =   "\(dataWithTeachersModelData.subject)"      //     хз удалить потом
+        rootVc.nameTeacher  =   "\(dataWithTeachersModelData.name)"        //     имя препода в переменную
+        rootVc.imageNamed   =   "\(dataWithTeachersModelData.image)"      //     Картинка(лицо)
+        rootVc.chet         =   "\(dataWithTeachersModelData.chet)"      //     Списать
+        rootVc.starCount    =   "\(dataWithTeachersModelData.rating)"   //     Колво звезд
+        rootVc.nature       =   "\(dataWithTeachersModelData.nature)"
+        rootVc.homeWork     =   "\(dataWithTeachersModelData.homeWork)"
           
     
         let navVC = UINavigationController(rootViewController: rootVc)

@@ -73,6 +73,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D249A7E1277739F800128ADF /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				D249A7BF2775EA6B00128ADF /* git.gif */,
+			);
+			path = GIF;
+			sourceTree = "<group>";
+		};
 		D26F7DC82766560A009467B4 = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +102,7 @@
 		D26F7DD32766560A009467B4 /* TableviewWithoutStroryboard */ = {
 			isa = PBXGroup;
 			children = (
-				D249A7BF2775EA6B00128ADF /* git.gif */,
+				D249A7E1277739F800128ADF /* GIF */,
 				D26F7DEC27665743009467B4 /* View */,
 				D26F7DEB2766573C009467B4 /* Model */,
 				D26F7DEA27665733009467B4 /* Controller */,

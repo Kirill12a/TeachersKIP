@@ -21,14 +21,13 @@ class PreferencesTeacherVC: UIViewController {
     }
         
     //MARK: Varibals // переменные делегата данных
-    var value: String? //
-    var imageNamed: String? // Картинка
-    var nameTeacher: String? // Имя учителя
-    // еще не юзаю
-    var starCount: String?    // количество звезд
-    var chet: String?        // типо можно списать или нет
-    var nature: String?     // харктер препода
-    var homeWork: String?  // нужно ли делать дз или можно тупо чилить
+  /* \*/            var value: String?           //
+   /* \*/           var imageNamed: String?     // Картинка
+    /* \*/          var nameTeacher: String?   // Имя учителя
+     /* \*/         var starCount: String?    // количество звезд
+      /* \*/        var chet: String?        // типо можно списать или нет
+       /* \*/       var nature: String?     // харктер препода
+        /* \*/      var homeWork: String?  // нужно ли делать дз или можно тупо чилить
     // ------------------ //
     
     
@@ -46,7 +45,7 @@ class PreferencesTeacherVC: UIViewController {
         view.addSubview(imageAccountTeacher)
         imageAccountTeacher.snp.makeConstraints { (make) in
 //            make.top.equalTo(view).offset(view.bounds.height - view.bounds.width * 1.9)
-            make.top.equalTo(80)
+            make.top.equalTo(84)
             make.centerX.equalTo(view.snp.centerX)
             make.height.equalTo(176)
             make.width.equalTo(212)
