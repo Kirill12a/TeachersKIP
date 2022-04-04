@@ -21,6 +21,8 @@
 		D26F7DF52766600F009467B4 /* CellWithTeachers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF42766600F009467B4 /* CellWithTeachers.swift */; };
 		D26F7DF727673869009467B4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF627673869009467B4 /* UserData.swift */; };
 		D26F7DFA27673D54009467B4 /* PreferencesTeacherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF827673D54009467B4 /* PreferencesTeacherVC.swift */; };
+		D2EE6E2F27FB712C00438D11 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */; };
+		D2EE6E3427FB838000438D11 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E3327FB838000438D11 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		D26F7DF627673869009467B4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D26F7DF827673D54009467B4 /* PreferencesTeacherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTeacherVC.swift; sourceTree = "<group>"; };
 		D2EE6E2C27FB698400438D11 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		D2EE6E3327FB838000438D11 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E153F531AAE689FF23F9B5C2 /* Pods_TableviewWithoutStroryboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableviewWithoutStroryboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,7 +132,10 @@
 		D26F7DEA27665733009467B4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D2EE6E2D27FB711700438D11 /* TabBar */,
+				D2EE6E3227FB82E400438D11 /* Screen */,
 				D26F7DD82766560A009467B4 /* ViewController.swift */,
+				D2EE6E3327FB838000438D11 /* TestViewController.swift */,
 				D26F7DF827673D54009467B4 /* PreferencesTeacherVC.swift */,
 			);
 			path = Controller;
@@ -176,6 +183,21 @@
 				D26F7DEF27665936009467B4 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		D2EE6E2D27FB711700438D11 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D2EE6E3227FB82E400438D11 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,9 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EE6E3427FB838000438D11 /* TestViewController.swift in Sources */,
 				D26F7DF52766600F009467B4 /* CellWithTeachers.swift in Sources */,
 				D26F7DF027665936009467B4 /* Constants.swift in Sources */,
 				D26F7DF727673869009467B4 /* UserData.swift in Sources */,
+				D2EE6E2F27FB712C00438D11 /* MainTabBarController.swift in Sources */,
 				D26F7DEE276658B5009467B4 /* ModelDataTeachers.swift in Sources */,
 				D26F7DFA27673D54009467B4 /* PreferencesTeacherVC.swift in Sources */,
 				D26F7DD92766560A009467B4 /* ViewController.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 class ViewController: UIViewController {
     
@@ -66,7 +67,7 @@ extension ViewController: UITableViewDelegate{
         
         rootVc.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: self, action: #selector(dismis))
         
-        rootVc.title        =   "Учитель:\(dataWithTeachersModelData.name)" //     тайтл на втором экране
+        rootVc.title        =   "Учитель:\(dataWithTeachersModelData.name)"  //     тайтл на втором экране
         rootVc.value        =   "\(dataWithTeachersModelData.subject)"      //     хз удалить потом
         rootVc.nameTeacher  =   "\(dataWithTeachersModelData.name)"        //     имя препода в переменную
         rootVc.imageNamed   =   "\(dataWithTeachersModelData.image)"      //     Картинка(лицо)
@@ -87,7 +88,24 @@ extension ViewController: UITableViewDelegate{
 }
 
 
+//MARK: - Canvas
+struct FlowProvider: PreviewProvider {
+  static var previews: some View {
+    ContainterView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
+  }
 
+  struct ContainterView: UIViewControllerRepresentable {
+
+    let view = ViewController()
+    func makeUIViewController(context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) -> ViewController {
+      return view
+    }
+
+    func updateUIViewController(_ uiViewController: FlowProvider.ContainterView.UIViewControllerType, context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) {
+
+    }
+  }
+}
 
 
 
