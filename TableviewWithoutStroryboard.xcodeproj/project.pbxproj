@@ -41,6 +41,7 @@
 		D26F7DF42766600F009467B4 /* CellWithTeachers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithTeachers.swift; sourceTree = "<group>"; };
 		D26F7DF627673869009467B4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D26F7DF827673D54009467B4 /* PreferencesTeacherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTeacherVC.swift; sourceTree = "<group>"; };
+		D2EE6E2C27FB698400438D11 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E153F531AAE689FF23F9B5C2 /* Pods_TableviewWithoutStroryboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableviewWithoutStroryboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +85,7 @@
 		D26F7DC82766560A009467B4 = {
 			isa = PBXGroup;
 			children = (
+				D2EE6E2C27FB698400438D11 /* README.md */,
 				D26F7DD32766560A009467B4 /* TableviewWithoutStroryboard */,
 				D26F7DD22766560A009467B4 /* Products */,
 				5F83CB08E4687D9E924E113B /* Pods */,

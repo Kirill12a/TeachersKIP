@@ -1,2 +1,2 @@
-# TeachersKIP
-## Рейтинг преподавателей.
+#  KipTeacher
+
