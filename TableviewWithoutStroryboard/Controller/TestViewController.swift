@@ -13,7 +13,7 @@ struct TestViewController: View {
       List{
         Section("Разработчки") {
 
-          CellView(name: "Kiko", lang: "Swift")
+          CellView(positions: Position.teamLead.rawValue, nickname: "Kiko")
         }
       }
       .navigationTitle("Создатели")
@@ -22,15 +22,21 @@ struct TestViewController: View {
 
 }
 
+enum Position: String{
+  case teamLead
+  case developer
+  case design
+  case ideas
+}
+
 struct CellView: View {
-  @State var name: String?
-  @State var lang: String?
+  @State var positions: Position.RawValue
+  @State var nickname: String
   var body: some View{
     HStack{
-      Text(name!)
+      Text(nickname)
       Spacer()
-      Text(lang!)
-      Link("Руководитель", destination: URL(string: "https://github.com/Kirill12a")!)
+      Link(positions, destination: URL(string: "https://github.com/Kirill12a")!)
     }
   }
 }
