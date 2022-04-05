@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct TestViewController: View {
+struct DeveloperViewController: View {
   
     var body: some View {
       NavigationView{
@@ -81,6 +81,6 @@ struct CellView: View {
 
 struct TestViewController_Previews: PreviewProvider {
     static var previews: some View {
-        TestViewController()
+        DeveloperViewController()
     }
 }

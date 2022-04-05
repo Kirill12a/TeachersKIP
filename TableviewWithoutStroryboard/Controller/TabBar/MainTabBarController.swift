@@ -17,8 +17,8 @@ class MainTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let searchVC      =   ViewController()
-    let favouriteVC   =   TestViewController()
+    let searchVC      =   TeachersViewController()
+    let favouriteVC   =   DeveloperViewController()
 
     let host = UIHostingController(rootView: favouriteVC)
     viewControllers = [

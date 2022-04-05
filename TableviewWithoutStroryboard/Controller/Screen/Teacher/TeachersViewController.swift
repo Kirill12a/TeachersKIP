@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import SwiftUI
 
-class ViewController: UIViewController {
+class TeachersViewController: UIViewController {
     
     var dataWithTeachers = UserData.dataWithTeachers
 
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension TeachersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataWithTeachers.count
     }
@@ -61,9 +61,9 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate{
+extension TeachersViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rootVc = PreferencesTeacherVC()
+        let rootVc = DetailedInformationViewController()
         let dataWithTeachersModelData = dataWithTeachers[indexPath.row]
         
         rootVc.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: self, action: #selector(dismis))
@@ -97,8 +97,8 @@ struct FlowProvider: PreviewProvider {
 
   struct ContainterView: UIViewControllerRepresentable {
 
-    let view = ViewController()
-    func makeUIViewController(context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) -> ViewController {
+    let view = TeachersViewController()
+    func makeUIViewController(context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) -> TeachersViewController {
       return view
     }
 

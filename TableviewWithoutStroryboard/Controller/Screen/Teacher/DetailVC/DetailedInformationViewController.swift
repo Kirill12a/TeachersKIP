@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import SwiftGifOrigin
 
-class PreferencesTeacherVC: UIViewController {
+class DetailedInformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
