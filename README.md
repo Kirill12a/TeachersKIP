@@ -1,3 +1,3 @@
 #  KipTeacher
 
-## версия c uikit 
+## скоро...
