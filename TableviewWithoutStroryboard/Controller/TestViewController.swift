@@ -32,11 +32,6 @@ struct TestViewController: View {
 
       }.listRowSeparator(.visible) // мб change
 
-
-
-
-
-
       .navigationTitle("Участники")
         Spacer()
 

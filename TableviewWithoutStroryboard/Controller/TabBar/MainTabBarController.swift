@@ -26,7 +26,6 @@ class MainTabBarController: UITabBarController {
       setUpNavigationController(title: "Favourite", image: UIImage(systemName: "heart.circle.fill"), rootViewController: host)
     ]
 
-
   }
 
   private func setUpNavigationController(title: String, image: UIImage?, rootViewController: UIViewController) -> UIViewController {

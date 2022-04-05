@@ -12,6 +12,7 @@ import SwiftUI
 class ViewController: UIViewController {
     
     var dataWithTeachers = UserData.dataWithTeachers
+
     private let cellIdentifire = "cellID"
 
     override func viewDidLoad() {
@@ -54,7 +55,7 @@ extension ViewController: UITableViewDataSource {
         cell?.teacherName.text    = dataWithTeachers[indexPath.row].name
         cell?.teacherObjects.text = dataWithTeachers[indexPath.row].subject
         cell?.teacherRating.text  = dataWithTeachers[indexPath.row].rating
-        cell?.selectionStyle      = .none // удаление серго цвета при нажатие
+        cell?.selectionStyle      = .none
          
         return cell ?? UITableViewCell()
     }
