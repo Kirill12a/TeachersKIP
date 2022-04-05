@@ -17,15 +17,14 @@ class MainTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let searchVC      =   ViewController()
-    let favouriteVC   =   TestViewController()
+    let searchVC      =   TeachersViewController()
+    let favouriteVC   =   DeveloperViewController()
 
     let host = UIHostingController(rootView: favouriteVC)
     viewControllers = [
       setUpNavigationController(title: "Search", image: UIImage(systemName: "magnifyingglass.circle.fill"), rootViewController: searchVC),
       setUpNavigationController(title: "Favourite", image: UIImage(systemName: "heart.circle.fill"), rootViewController: host)
     ]
-
 
   }
 
