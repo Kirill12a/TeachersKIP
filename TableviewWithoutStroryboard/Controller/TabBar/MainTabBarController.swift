@@ -17,15 +17,26 @@ class MainTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let searchVC      =   TeachersViewController()
-    let favouriteVC   =   DeveloperViewController()
+    let teacherVC         =     TeachersViewController()
 
-    let host = UIHostingController(rootView: favouriteVC)
+    let scheduleVC        =     ScheduleViewController()
+
+    let newsVC            =     NewsViewController()
+
+    let developersVC      =     DeveloperViewController()
+
+    // ----------------
+    let host = UIHostingController(rootView: developersVC) // for SUI
+    //                                                                  \\
+//    let host_Schedule = UIHostingController(rootView: scheduleUI_View)
+    // ----------------
+
     viewControllers = [
-      setUpNavigationController(title: "Search", image: UIImage(systemName: "magnifyingglass.circle.fill"), rootViewController: searchVC),
-      setUpNavigationController(title: "Favourite", image: UIImage(systemName: "heart.circle.fill"), rootViewController: host)
+      setUpNavigationController(title: "Преподы", image: UIImage(systemName: "person.3.sequence"), rootViewController: teacherVC),
+      setUpNavigationController(title: "Расписание", image: UIImage(systemName: "tablecells"), rootViewController: scheduleVC),
+      setUpNavigationController(title: "Новости", image: UIImage(systemName: "paperplane"), rootViewController: newsVC),
+      setUpNavigationController(title: "Создатели", image: UIImage(systemName: "hammer"), rootViewController: host)
     ]
-
   }
 
   private func setUpNavigationController(title: String, image: UIImage?, rootViewController: UIViewController) -> UIViewController {
