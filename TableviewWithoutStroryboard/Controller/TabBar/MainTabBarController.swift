@@ -25,11 +25,8 @@ class MainTabBarController: UITabBarController {
 
     let developersVC      =     DeveloperViewController()
 
-    // ----------------
+    
     let host = UIHostingController(rootView: developersVC) // for SUI
-    //                                                                  \\
-//    let host_Schedule = UIHostingController(rootView: scheduleUI_View)
-    // ----------------
 
     viewControllers = [
       setUpNavigationController(title: "Преподы", image: UIImage(systemName: "person.3.sequence"), rootViewController: teacherVC),
