@@ -17,26 +17,26 @@ class MainTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let teacherVC       =   TeachersViewController()
+    let teacherVC         =     TeachersViewController()
 
-    let developersVC    =   DeveloperViewController()
+    let scheduleVC        =     ScheduleViewController()
 
-    let newsVC          =   NewsViewController()
+    let newsVC            =     NewsViewController()
 
-    let scheduleUI_View = ScheduleUIView()
+    let developersVC      =     DeveloperViewController()
 
     // ----------------
     let host = UIHostingController(rootView: developersVC) // for SUI
-
-    let host_Schedule = UIHostingController(rootView: scheduleUI_View)
+    //                                                                  \\
+//    let host_Schedule = UIHostingController(rootView: scheduleUI_View)
     // ----------------
 
     viewControllers = [
-      setUpNavigationController(title: "Search", image: UIImage(systemName: "magnifyingglass.circle.fill"), rootViewController: teacherVC),
-      setUpNavigationController(title: "Favourite", image: UIImage(systemName: "heart.circle.fill"), rootViewController: host),
-      setUpNavigationController(title: "News", image: UIImage(systemName: "magnifyingglass.circle.fill"), rootViewController: newsVC), setUpNavigationController(title: "Schedule", image: UIImage(systemName: "magnifyingglass.circle.fill"), rootViewController: host_Schedule)
+      setUpNavigationController(title: "Преподы", image: UIImage(systemName: "person.3.sequence"), rootViewController: teacherVC),
+      setUpNavigationController(title: "Расписание", image: UIImage(systemName: "tablecells"), rootViewController: scheduleVC),
+      setUpNavigationController(title: "Новости", image: UIImage(systemName: "paperplane"), rootViewController: newsVC),
+      setUpNavigationController(title: "Создатели", image: UIImage(systemName: "hammer"), rootViewController: host)
     ]
-
   }
 
   private func setUpNavigationController(title: String, image: UIImage?, rootViewController: UIViewController) -> UIViewController {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,14 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        let vc = TeachersViewController()
-        let navController = UINavigationController(rootViewController: vc)
-        window?.rootViewController = navController
-        return true
-    }
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
+//
+//      let scheduleVC = ScheduleUIView()
+////      let host = UIHostingController(rootView: scheduleVC)
+//
+//        let navController = UINavigationController(rootViewController: NewsViewController())
+//        window?.rootViewController = navController
+//        return true
+//    }
 
     // MARK: UISceneSession Lifecycle
 
