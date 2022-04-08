@@ -25,12 +25,15 @@ class MainTabBarController: UITabBarController {
 
     let developersVC      =     DeveloperViewController()
 
-    
+    let testVC =  TestScreen()
+
+
+    let hostTest = UIHostingController(rootView: testVC)
     let host = UIHostingController(rootView: developersVC) // for SUI
 
     viewControllers = [
       setUpNavigationController(title: "Преподы", image: UIImage(systemName: "person.3.sequence"), rootViewController: teacherVC),
-      setUpNavigationController(title: "Расписание", image: UIImage(systemName: "tablecells"), rootViewController: scheduleVC),
+      setUpNavigationController(title: "Расписание", image: UIImage(systemName: "tablecells"), rootViewController: hostTest),// тут поменял()
       setUpNavigationController(title: "Новости", image: UIImage(systemName: "paperplane"), rootViewController: newsVC),
       setUpNavigationController(title: "Создатели", image: UIImage(systemName: "hammer"), rootViewController: host)
     ]
