@@ -19,7 +19,7 @@ class MainTabBarController: UITabBarController {
 
     let teacherVC         =     TeachersViewController()
 
-    let scheduleVC        =     ScheduleViewController()
+//    let scheduleVC        =     ScheduleViewController()
 
     let newsVC            =     NewsViewController()
 
