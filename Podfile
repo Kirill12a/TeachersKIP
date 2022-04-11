@@ -8,5 +8,11 @@ target 'TableviewWithoutStroryboard' do
   # Pods for TableviewWithoutStroryboard
 pod 'SnapKit'
 pod 'SwiftGifOrigin', '~> 1.7.0'
+pod 'SDWebImage'
+pod 'SDWebImagePDFCoder'
+pod 'SDWebImageSwiftUI'
+
+
+
 
 end

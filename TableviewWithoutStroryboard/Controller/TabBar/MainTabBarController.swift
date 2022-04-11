@@ -11,7 +11,7 @@ import Foundation
 
 import UIKit
 import SwiftUI
-
+import WebKit
 class MainTabBarController: UITabBarController {
 
   override func viewDidLoad() {
@@ -19,18 +19,20 @@ class MainTabBarController: UITabBarController {
 
     let teacherVC         =     TeachersViewController()
 
-    let scheduleVC        =     ScheduleViewController()
+        let scheduleVC        =     ScheduleViewController()
 
     let newsVC            =     NewsViewController()
 
     let developersVC      =     DeveloperViewController()
 
-    
+    let testVC =  TestScreen()
+
+    let hostTest = UIHostingController(rootView: testVC)
     let host = UIHostingController(rootView: developersVC) // for SUI
 
     viewControllers = [
       setUpNavigationController(title: "Преподы", image: UIImage(systemName: "person.3.sequence"), rootViewController: teacherVC),
-      setUpNavigationController(title: "Расписание", image: UIImage(systemName: "tablecells"), rootViewController: scheduleVC),
+      setUpNavigationController(title: "Расписание", image: UIImage(systemName: "tablecells"), rootViewController: scheduleVC),// тут поменял()
       setUpNavigationController(title: "Новости", image: UIImage(systemName: "paperplane"), rootViewController: newsVC),
       setUpNavigationController(title: "Создатели", image: UIImage(systemName: "hammer"), rootViewController: host)
     ]
