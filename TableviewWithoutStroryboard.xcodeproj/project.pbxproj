@@ -14,11 +14,7 @@
 		D26F7DD92766560A009467B4 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DD82766560A009467B4 /* TeachersViewController.swift */; };
 		D26F7DDE2766560C009467B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26F7DDD2766560C009467B4 /* Assets.xcassets */; };
 		D26F7DE12766560C009467B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26F7DDF2766560C009467B4 /* LaunchScreen.storyboard */; };
-		D26F7DEE276658B5009467B4 /* ModelDataTeachers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DED276658B5009467B4 /* ModelDataTeachers.swift */; };
 		D26F7DF027665936009467B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DEF27665936009467B4 /* Constants.swift */; };
-		D26F7DF227665D7A009467B4 /* CellWithTeachers.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26F7DF127665D7A009467B4 /* CellWithTeachers.xib */; };
-		D26F7DF52766600F009467B4 /* CellWithTeachers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF42766600F009467B4 /* CellWithTeachers.swift */; };
-		D26F7DF727673869009467B4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF627673869009467B4 /* UserData.swift */; };
 		D26F7DFA27673D54009467B4 /* DetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF827673D54009467B4 /* DetailedInformationViewController.swift */; };
 		D28895EE28060BD00031DC8D /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28895ED28060BD00031DC8D /* TeacherTableViewCell.swift */; };
 		D2EE6E2F27FB712C00438D11 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */; };
@@ -40,11 +36,7 @@
 		D26F7DDD2766560C009467B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D26F7DE02766560C009467B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D26F7DE22766560C009467B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D26F7DED276658B5009467B4 /* ModelDataTeachers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataTeachers.swift; sourceTree = "<group>"; };
 		D26F7DEF27665936009467B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D26F7DF127665D7A009467B4 /* CellWithTeachers.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellWithTeachers.xib; sourceTree = "<group>"; };
-		D26F7DF42766600F009467B4 /* CellWithTeachers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithTeachers.swift; sourceTree = "<group>"; };
-		D26F7DF627673869009467B4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D26F7DF827673D54009467B4 /* DetailedInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInformationViewController.swift; sourceTree = "<group>"; };
 		D28895ED28060BD00031DC8D /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
 		D2EE6E2C27FB698400438D11 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -150,8 +142,6 @@
 		D26F7DEB2766573C009467B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D26F7DED276658B5009467B4 /* ModelDataTeachers.swift */,
-				D26F7DF627673869009467B4 /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,8 +158,6 @@
 		D26F7DF327665FA9009467B4 /* CellTableView */ = {
 			isa = PBXGroup;
 			children = (
-				D26F7DF127665D7A009467B4 /* CellWithTeachers.xib */,
-				D26F7DF42766600F009467B4 /* CellWithTeachers.swift */,
 				D28895ED28060BD00031DC8D /* TeacherTableViewCell.swift */,
 			);
 			path = CellTableView;
@@ -330,7 +318,6 @@
 			files = (
 				D249A7C02775EA6B00128ADF /* git.gif in Resources */,
 				D26F7DE12766560C009467B4 /* LaunchScreen.storyboard in Resources */,
-				D26F7DF227665D7A009467B4 /* CellWithTeachers.xib in Resources */,
 				D26F7DDE2766560C009467B4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,13 +373,10 @@
 			files = (
 				D2EE6E3427FB838000438D11 /* DeveloperViewController.swift in Sources */,
 				D28895EE28060BD00031DC8D /* TeacherTableViewCell.swift in Sources */,
-				D26F7DF52766600F009467B4 /* CellWithTeachers.swift in Sources */,
 				D26F7DF027665936009467B4 /* Constants.swift in Sources */,
 				D2EE6E6227FF5CB400438D11 /* NewsViewController.swift in Sources */,
-				D26F7DF727673869009467B4 /* UserData.swift in Sources */,
 				D2EE6E8E2801CE4900438D11 /* ScheduleViewController.swift in Sources */,
 				D2EE6E2F27FB712C00438D11 /* MainTabBarController.swift in Sources */,
-				D26F7DEE276658B5009467B4 /* ModelDataTeachers.swift in Sources */,
 				D26F7DFA27673D54009467B4 /* DetailedInformationViewController.swift in Sources */,
 				D26F7DD92766560A009467B4 /* TeachersViewController.swift in Sources */,
 				D2EE6E5E27FCDA9900438D11 /* URL_WORK.swift in Sources */,
