@@ -13,6 +13,7 @@ import SwiftUI
 
 class TeachersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+  var array: [WelcomeElement] = []
 
 
   var tableView: UITableView = {
@@ -25,7 +26,19 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
     view.addSubview(tableView)
     tableView.delegate = self
     tableView.dataSource = self
+
+    URL_Work.session?.decodeJSON(apiURL: "https://api.npoint.io/6d0ff1875b7004c3e330", mode: [WelcomeElement].self, comletion: { data in
+      DispatchQueue.main.async {
+        self.array = data
+
+        print(self.array[0].GitLink)
+      }
+    })
+
+
+
   }
+
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()

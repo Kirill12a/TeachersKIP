@@ -17,6 +17,7 @@
 		D26F7DF027665936009467B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DEF27665936009467B4 /* Constants.swift */; };
 		D26F7DFA27673D54009467B4 /* DetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF827673D54009467B4 /* DetailedInformationViewController.swift */; };
 		D28895EE28060BD00031DC8D /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28895ED28060BD00031DC8D /* TeacherTableViewCell.swift */; };
+		D28895F12806163D0031DC8D /* TeacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28895F02806163D0031DC8D /* TeacheModel.swift */; };
 		D2EE6E2F27FB712C00438D11 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */; };
 		D2EE6E3427FB838000438D11 /* DeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E3327FB838000438D11 /* DeveloperViewController.swift */; };
 		D2EE6E5E27FCDA9900438D11 /* URL_WORK.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E5D27FCDA9900438D11 /* URL_WORK.swift */; };
@@ -39,6 +40,7 @@
 		D26F7DEF27665936009467B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D26F7DF827673D54009467B4 /* DetailedInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInformationViewController.swift; sourceTree = "<group>"; };
 		D28895ED28060BD00031DC8D /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
+		D28895F02806163D0031DC8D /* TeacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacheModel.swift; sourceTree = "<group>"; };
 		D2EE6E2C27FB698400438D11 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D2EE6E3327FB838000438D11 /* DeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		D26F7DEB2766573C009467B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D28895F02806163D0031DC8D /* TeacheModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				D26F7DFA27673D54009467B4 /* DetailedInformationViewController.swift in Sources */,
 				D26F7DD92766560A009467B4 /* TeachersViewController.swift in Sources */,
 				D2EE6E5E27FCDA9900438D11 /* URL_WORK.swift in Sources */,
+				D28895F12806163D0031DC8D /* TeacheModel.swift in Sources */,
 				D2EE6E6A27FFFDB600438D11 /* TestScreen.swift in Sources */,
 				D26F7DD52766560A009467B4 /* AppDelegate.swift in Sources */,
 				D26F7DD72766560A009467B4 /* SceneDelegate.swift in Sources */,
