@@ -9,103 +9,55 @@ import UIKit
 import SnapKit
 import SwiftUI
 
-class TeachersViewController: UIViewController {
-    
-    var dataWithTeachers = UserData.dataWithTeachers
+//TeachersViewController
 
-    private let cellIdentifire = "cellID"
+class TeachersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    override func viewDidLoad() {
-        print("Pfehrf")
-        super.viewDidLoad()
-        tableView.register(UINib(nibName: "CellWithTeachers", bundle: nil), forCellReuseIdentifier: cellIdentifire)
-        setupView()
-        setupConstraints()
-    }
-    
-        //MARK: Таблица
-    private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: CGRect.zero, style: .grouped)
-       return tableView
-    }()
-        
-    private func setupView(){
-        view.addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-    
-    private func setupConstraints(){
-        tableView.snp.makeConstraints { make in
-            make.left.right.bottom.top.equalToSuperview().inset(0)
-        }
-    }
-}
-
-extension TeachersViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataWithTeachers.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifire) as? CellWithTeachers
-        cell?.teacherImage.image = UIImage(named: dataWithTeachers[indexPath.row].image)
-        
-
-        cell?.teacherName.text    = dataWithTeachers[indexPath.row].name
-        cell?.teacherObjects.text = dataWithTeachers[indexPath.row].subject
-        cell?.teacherRating.text  = dataWithTeachers[indexPath.row].rating
-        cell?.selectionStyle      = .none
-         
-        return cell ?? UITableViewCell()
-    }
-}
-
-extension TeachersViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rootVc = DetailedInformationViewController()
-        let dataWithTeachersModelData = dataWithTeachers[indexPath.row]
-        
-        rootVc.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: self, action: #selector(dismis))
-        
-        rootVc.title        =   "Учитель:\(dataWithTeachersModelData.name)"  //     тайтл на втором экране
-        rootVc.value        =   "\(dataWithTeachersModelData.subject)"      //     хз удалить потом
-        rootVc.nameTeacher  =   "\(dataWithTeachersModelData.name)"        //     имя препода в переменную
-        rootVc.imageNamed   =   "\(dataWithTeachersModelData.image)"      //     Картинка(лицо)
-        rootVc.chet         =   "\(dataWithTeachersModelData.chet)"      //     Списать
-        rootVc.starCount    =   "\(dataWithTeachersModelData.rating)"   //     Колво звезд
-        rootVc.nature       =   "\(dataWithTeachersModelData.nature)"
-        rootVc.homeWork     =   "\(dataWithTeachersModelData.homeWork)"
-          
-    
-        let navVC = UINavigationController(rootViewController: rootVc)
-        navVC.modalPresentationStyle = .fullScreen
-        present(navVC, animated: true, completion: nil)
-    }
-    
-        @objc private func dismis(){
-            dismiss(animated: true, completion: nil)
-        }
-}
+  var array: [WelcomeElement] = []
 
 
-//MARK: - Canvas
-struct FlowProvider: PreviewProvider {
-  static var previews: some View {
-    ContainterView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
+  var tableView: UITableView = {
+    var table = UITableView()
+    table.register(TableViewCell.self, forCellReuseIdentifier: "CustomTableViewCell")
+  return table
+  }()
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.addSubview(tableView)
+    tableView.delegate = self
+    tableView.dataSource = self
+
+    URL_Work.session?.decodeJSON(apiURL: "https://api.npoint.io/6d0ff1875b7004c3e330", mode: [WelcomeElement].self, comletion: { data in
+      DispatchQueue.main.async {
+        self.array = data
+
+        print(self.array[0].GitLink)
+      }
+    })
+
+
+
   }
 
-  struct ContainterView: UIViewControllerRepresentable {
 
-    let view = TeachersViewController()
-    func makeUIViewController(context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) -> TeachersViewController {
-      return view
-    }
-
-    func updateUIViewController(_ uiViewController: FlowProvider.ContainterView.UIViewControllerType, context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) {
-
-    }
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    tableView.frame = view.bounds
   }
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 20
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as! TableViewCell
+    return cell
+  }
+
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return view.bounds.size.height / 9
+  }
+
 }
 
 

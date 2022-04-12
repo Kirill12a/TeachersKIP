@@ -7,6 +7,7 @@
 
 import Foundation
 
+// https://api.npoint.io/6d0ff1875b7004c3e330
 /// Получение данных из сети и дальнейшая работа с ними
 class URL_Work{
 
