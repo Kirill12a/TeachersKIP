@@ -20,9 +20,9 @@ class TableViewCell: UITableViewCell {
   private let name = UILabel()
 
   //MARK: - Сейчас это актуально
-  private let imageTeacher  =   UIImageView()
+   let imageTeacher  =   UIImageView()
    let nameTeacher   =   UILabel()
-  private let lessons       =   UILabel()
+   let lessons       =   UILabel()
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)

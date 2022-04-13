@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import SwiftUI
+import SDWebImage
 
 //TeachersViewController
 
@@ -51,6 +52,8 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as! TableViewCell
     cell.nameTeacher.text = array[indexPath.row].teacherName
+    cell.lessons.text = array[indexPath.row].schoolSubject
+    cell.imageTeacher.sd_setImage(with: URL(string: array[indexPath.row].image))
     return cell
   }
 
@@ -59,6 +62,9 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
   }
 
 }
+
+// cell.packItemImage.sd_setImage(with: URL(string: smileImageUrl[indexPath.row]))
+
 
 
 
