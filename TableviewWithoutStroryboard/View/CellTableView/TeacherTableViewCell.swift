@@ -18,13 +18,8 @@ class TableViewCell: UITableViewCell {
 
 
 
-  private let button = UIButton()
-  private let name = UILabel()
 
-  //MARK: - Сейчас это актуально
-//   let imageTeacher  =   UIImageView()
-//   let nameTeacher   =   UILabel()
-//   let lessons       =   UILabel()
+
 
   lazy var imageTeacher: UIImageView = {
     var image = UIImageView()
@@ -44,14 +39,6 @@ class TableViewCell: UITableViewCell {
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-//    contentView.addSubview(button)
-    button.setTitle("Tap me", for: .normal)
-    button.backgroundColor = .red
-    button.addTarget(nil, action: #selector(didTapButton), for: .touchUpInside)
-
-//    contentView.addSubview(name)
-    name.text = "Азовцева В.В"
 
     //MARK: - Сейчас это актуально
     contentView.addSubview(imageTeacher)
