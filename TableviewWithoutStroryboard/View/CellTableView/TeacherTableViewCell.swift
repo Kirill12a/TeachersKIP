@@ -12,6 +12,8 @@ import SnapKit
 class TableViewCell: UITableViewCell {
 
 
+
+
   static let identifire = "CustomTableViewCell"
 
 
@@ -20,9 +22,25 @@ class TableViewCell: UITableViewCell {
   private let name = UILabel()
 
   //MARK: - Сейчас это актуально
-  private let imageTeacher  =   UIImageView()
-   let nameTeacher   =   UILabel()
-  private let lessons       =   UILabel()
+//   let imageTeacher  =   UIImageView()
+//   let nameTeacher   =   UILabel()
+//   let lessons       =   UILabel()
+
+  lazy var imageTeacher: UIImageView = {
+    var image = UIImageView()
+
+    return image
+  }()
+
+  lazy var nameTeacher: UILabel = {
+    var label = UILabel()
+    return label
+  }()
+
+  lazy var lessons: UILabel = {
+    var label = UILabel()
+    return label
+  }()
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -60,17 +78,6 @@ class TableViewCell: UITableViewCell {
 
   override func layoutSubviews() {
     super.layoutSubviews()
-
-//
-//
-//    button.snp.makeConstraints { make in
-//      make.center.equalToSuperview()
-//    }
-//
-//    name.snp.makeConstraints { make in
-//      make.left.equalToSuperview().inset(2)
-//      make.top.equalToSuperview().inset(3)
-//    }
 
     imageTeacher.snp.makeConstraints { make in
       make.width.equalTo(contentView.bounds.size.width / 4)
