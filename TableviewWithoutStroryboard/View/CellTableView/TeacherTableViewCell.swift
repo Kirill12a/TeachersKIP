@@ -21,7 +21,7 @@ class TableViewCell: UITableViewCell {
 
   //MARK: - Сейчас это актуально
   private let imageTeacher  =   UIImageView()
-  private let nameTeacher   =   UILabel()
+   let nameTeacher   =   UILabel()
   private let lessons       =   UILabel()
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

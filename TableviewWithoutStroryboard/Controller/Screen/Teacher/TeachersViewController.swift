@@ -13,14 +13,15 @@ import SwiftUI
 
 class TeachersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-  var array: [WelcomeElement] = []
-
+  private var array: [WelcomeElement] = []
 
   var tableView: UITableView = {
     var table = UITableView()
     table.register(TableViewCell.self, forCellReuseIdentifier: "CustomTableViewCell")
-  return table
+    return table
   }()
+
+
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(tableView)
@@ -30,13 +31,11 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
     URL_Work.session?.decodeJSON(apiURL: "https://api.npoint.io/6d0ff1875b7004c3e330", mode: [WelcomeElement].self, comletion: { data in
       DispatchQueue.main.async {
         self.array = data
+        print(self.array[0].gitLink)
+        self.tableView.reloadData()
 
-        print(self.array[0].GitLink)
       }
     })
-
-
-
   }
 
 
@@ -46,11 +45,12 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 20
+    return array.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as! TableViewCell
+    cell.nameTeacher.text = array[indexPath.row].teacherName
     return cell
   }
 
