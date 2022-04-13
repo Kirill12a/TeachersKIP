@@ -63,8 +63,6 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
 
 }
 
-// cell.packItemImage.sd_setImage(with: URL(string: smileImageUrl[indexPath.row]))
-
 
 
 
