@@ -18,7 +18,7 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
 
   var tableView: UITableView = {
     var table = UITableView()
-    table.register(TableViewCell.self, forCellReuseIdentifier: "CustomTableViewCell")
+    table.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifire)
     return table
   }()
 
@@ -50,7 +50,7 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as! TableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifire) as! TableViewCell
     cell.nameTeacher.text = array[indexPath.row].teacherName
     cell.lessons.text = array[indexPath.row].schoolSubject
     cell.imageTeacher.sd_setImage(with: URL(string: array[indexPath.row].image))
