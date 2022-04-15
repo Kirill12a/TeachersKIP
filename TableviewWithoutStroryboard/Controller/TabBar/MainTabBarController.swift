@@ -18,23 +18,19 @@ class MainTabBarController: UITabBarController {
     super.viewDidLoad()
 
     let teacherVC         =     TeachersViewController()
-
-        let scheduleVC        =     ScheduleViewController()
-
-    let newsVC            =     NewsViewController()
-
+    let scheduleVC        =     ScheduleViewController()
+    let newsVC            =     NewsUIView()
     let developersVC      =     DeveloperViewController()
 
-    let testVC =  TestScreen()
 
-    let hostTest = UIHostingController(rootView: testVC)
-    let host = UIHostingController(rootView: developersVC) // for SUI
+    let developerHOST = UIHostingController(rootView: developersVC) // for SUI
+    let newsHOST = UIHostingController(rootView: newsVC)
 
     viewControllers = [
       setUpNavigationController(title: "Преподы", image: UIImage(systemName: "person.3.sequence"), rootViewController: teacherVC),
-      setUpNavigationController(title: "Расписание", image: UIImage(systemName: "tablecells"), rootViewController: scheduleVC),// тут поменял()
-      setUpNavigationController(title: "Новости", image: UIImage(systemName: "paperplane"), rootViewController: newsVC),
-      setUpNavigationController(title: "Создатели", image: UIImage(systemName: "hammer"), rootViewController: host)
+      setUpNavigationController(title: "Расписание", image: UIImage(systemName: "tablecells"), rootViewController: scheduleVC),
+      setUpNavigationController(title: "Новости", image: UIImage(systemName: "paperplane"), rootViewController: newsHOST),
+      setUpNavigationController(title: "Создатели", image: UIImage(systemName: "hammer"), rootViewController: developerHOST)
     ]
   }
 
