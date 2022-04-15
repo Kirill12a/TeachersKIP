@@ -7,9 +7,35 @@
 
 import SwiftUI
 
+
+struct URLImage: View {
+  var body: some View{
+    Image("")
+  }
+}
 struct NewsUIView: View {
+
+  @StateObject var viewModel = ViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      NavigationView{
+        List{
+          ForEach(viewModel.courses, id: \.self){courses in
+            HStack{
+              Image("")
+                .frame(width: 130, height: 70)
+                .background(.gray)
+              Text(courses.title)
+                .bold()
+            }
+            .padding(3)
+          }
+        }
+        .navigationTitle("Courses")
+        .onAppear{
+          viewModel.fetch()
+        }
+      }
     }
 }
 
