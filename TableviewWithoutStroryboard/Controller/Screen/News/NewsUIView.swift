@@ -16,11 +16,13 @@ struct URLImage: View {
     if let data = data, let uiimage = UIImage(data: data) {
       Image(uiImage: uiimage)
         .resizable()
+        .aspectRatio(contentMode: .fill)
         .frame(width: 130, height: 70)
         .background(.gray)
     } else{
-      Image("")
+      Image(systemName: "video")
         .resizable()
+        .aspectRatio(contentMode: .fit)
         .frame(width: 130, height: 70)
         .background(.gray)
         .onAppear{
@@ -45,8 +47,7 @@ struct NewsUIView: View {
         List{
           ForEach(viewModel.courses, id: \.self){courses in
             HStack{
-              Image("")
-
+              URLImage(urlString: courses.url)
               Text(courses.title)
                 .bold()
             }
