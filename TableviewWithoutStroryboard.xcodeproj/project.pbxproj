@@ -18,10 +18,11 @@
 		D26F7DFA27673D54009467B4 /* DetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F7DF827673D54009467B4 /* DetailedInformationViewController.swift */; };
 		D28895EE28060BD00031DC8D /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28895ED28060BD00031DC8D /* TeacherTableViewCell.swift */; };
 		D28895F12806163D0031DC8D /* TeacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28895F02806163D0031DC8D /* TeacheModel.swift */; };
+		D28895F3280A0EE20031DC8D /* NewsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28895F2280A0EE20031DC8D /* NewsUIView.swift */; };
+		D28895F5280A12B60031DC8D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28895F4280A12B60031DC8D /* ViewModel.swift */; };
 		D2EE6E2F27FB712C00438D11 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */; };
 		D2EE6E3427FB838000438D11 /* DeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E3327FB838000438D11 /* DeveloperViewController.swift */; };
 		D2EE6E5E27FCDA9900438D11 /* URL_WORK.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E5D27FCDA9900438D11 /* URL_WORK.swift */; };
-		D2EE6E6227FF5CB400438D11 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E6127FF5CB400438D11 /* NewsViewController.swift */; };
 		D2EE6E6A27FFFDB600438D11 /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E6927FFFDB600438D11 /* TestScreen.swift */; };
 		D2EE6E8E2801CE4900438D11 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E8D2801CE4900438D11 /* ScheduleViewController.swift */; };
 /* End PBXBuildFile section */
@@ -41,11 +42,12 @@
 		D26F7DF827673D54009467B4 /* DetailedInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInformationViewController.swift; sourceTree = "<group>"; };
 		D28895ED28060BD00031DC8D /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
 		D28895F02806163D0031DC8D /* TeacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacheModel.swift; sourceTree = "<group>"; };
+		D28895F2280A0EE20031DC8D /* NewsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUIView.swift; sourceTree = "<group>"; };
+		D28895F4280A12B60031DC8D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D2EE6E2C27FB698400438D11 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D2EE6E3327FB838000438D11 /* DeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperViewController.swift; sourceTree = "<group>"; };
 		D2EE6E5D27FCDA9900438D11 /* URL_WORK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_WORK.swift; sourceTree = "<group>"; };
-		D2EE6E6127FF5CB400438D11 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		D2EE6E6927FFFDB600438D11 /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
 		D2EE6E8D2801CE4900438D11 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		E153F531AAE689FF23F9B5C2 /* Pods_TableviewWithoutStroryboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableviewWithoutStroryboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,7 +256,8 @@
 		D2EE6E5F27FF4CB100438D11 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				D2EE6E6127FF5CB400438D11 /* NewsViewController.swift */,
+				D28895F2280A0EE20031DC8D /* NewsUIView.swift */,
+				D28895F4280A12B60031DC8D /* ViewModel.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -377,12 +380,13 @@
 				D2EE6E3427FB838000438D11 /* DeveloperViewController.swift in Sources */,
 				D28895EE28060BD00031DC8D /* TeacherTableViewCell.swift in Sources */,
 				D26F7DF027665936009467B4 /* Constants.swift in Sources */,
-				D2EE6E6227FF5CB400438D11 /* NewsViewController.swift in Sources */,
 				D2EE6E8E2801CE4900438D11 /* ScheduleViewController.swift in Sources */,
 				D2EE6E2F27FB712C00438D11 /* MainTabBarController.swift in Sources */,
 				D26F7DFA27673D54009467B4 /* DetailedInformationViewController.swift in Sources */,
+				D28895F5280A12B60031DC8D /* ViewModel.swift in Sources */,
 				D26F7DD92766560A009467B4 /* TeachersViewController.swift in Sources */,
 				D2EE6E5E27FCDA9900438D11 /* URL_WORK.swift in Sources */,
+				D28895F3280A0EE20031DC8D /* NewsUIView.swift in Sources */,
 				D28895F12806163D0031DC8D /* TeacheModel.swift in Sources */,
 				D2EE6E6A27FFFDB600438D11 /* TestScreen.swift in Sources */,
 				D26F7DD52766560A009467B4 /* AppDelegate.swift in Sources */,
