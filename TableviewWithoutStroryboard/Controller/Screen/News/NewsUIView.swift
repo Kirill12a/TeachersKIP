@@ -42,29 +42,29 @@ struct NewsUIView: View {
 
   @StateObject var viewModel = ViewModel()
 
-    var body: some View {
-      NavigationView{
-        List{
-          ForEach(viewModel.courses, id: \.self){courses in
-            HStack{
-              URLImage(urlString: courses.url)
-              Text(courses.title)
-                .bold()
-            }
-            .padding(3)
+  var body: some View {
+    NavigationView{
+      List{
+        ForEach(viewModel.courses, id: \.self){courses in
+          HStack{
+            URLImage(urlString: courses.url)
+            Text(courses.title)
+              .bold()
           }
-        }
-        .navigationTitle("Courses")
-        .onAppear{
-          viewModel.fetch()
+          .padding(3)
         }
       }
+      .navigationTitle("Courses")
+      .onAppear{
+        viewModel.fetch()
+      }
     }
+  }
 }
 
 struct NewsUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsUIView()
-    }
+  static var previews: some View {
+    NewsUIView()
+  }
 }
 
