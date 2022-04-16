@@ -47,7 +47,7 @@ struct NewsUIView: View {
       List{
         ForEach(viewModel.courses, id: \.self){courses in
           HStack{
-            URLImage(urlString: courses.url)
+            URLImage(urlString: courses.image)
             Text(courses.title)
               .bold()
           }
