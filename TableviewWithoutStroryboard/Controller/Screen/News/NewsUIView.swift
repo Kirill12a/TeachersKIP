@@ -10,7 +10,7 @@ import SwiftUI
 
 struct URLImage: View {
   let urlString: String
-
+  
   @State var data: Data?
   var body: some View{
     if let data = data, let uiimage = UIImage(data: data) {
@@ -39,9 +39,9 @@ struct URLImage: View {
   }
 }
 struct NewsUIView: View {
-
+  
   @StateObject var viewModel = ViewModel()
-
+  
   var body: some View {
     NavigationView{
       List{
@@ -49,7 +49,7 @@ struct NewsUIView: View {
           NavigationLink(destination: WebView(url: courses.link)) {
             Cell(image: courses.image, title: courses.title)
           }
-
+          
         }
       }
       .navigationTitle("Courses")
@@ -63,7 +63,7 @@ struct NewsUIView: View {
 struct Cell: View {
   @State var image = ""
   @State var title = ""
-
+  
   var body: some View {
     HStack{
       URLImage(urlString: image)
