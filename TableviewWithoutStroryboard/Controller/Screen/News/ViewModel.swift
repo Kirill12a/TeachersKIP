@@ -21,16 +21,15 @@ import SwiftUI
 //}
 
 struct Course: Hashable, Codable {
-    let link: String
-    let image: String
-    let title: String
+  let link: String
+  let image: String
+  let title: String
 }
 
 class ViewModel: ObservableObject {
 
   @Published var courses: [Course] = []
-//https://api.npoint.io/ee9347a63ff438d21388
-  // https://jsonplaceholder.typicode.com/photos
+  //https://api.npoint.io/ee9347a63ff438d21388
   func fetch(){
     guard let url = URL(string: "https://api.npoint.io/ee9347a63ff438d21388") else {return}
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
