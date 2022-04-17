@@ -46,12 +46,10 @@ struct NewsUIView: View {
     NavigationView{
       List{
         ForEach(viewModel.courses, id: \.self){courses in
-          HStack{
-            URLImage(urlString: courses.image)
-            Text(courses.title)
-              .bold()
+          NavigationLink(destination: WebView(url: courses.link)) {
+            Cell(image: courses.image, title: courses.title)
           }
-          .padding(3)
+
         }
       }
       .navigationTitle("Courses")
@@ -62,9 +60,22 @@ struct NewsUIView: View {
   }
 }
 
+struct Cell: View {
+  @State var image = ""
+  @State var title = ""
+
+  var body: some View {
+    HStack{
+      URLImage(urlString: image)
+      Text(title)
+        .bold()
+    }
+    .padding(3)
+  }
+}
+
 struct NewsUIView_Previews: PreviewProvider {
   static var previews: some View {
     NewsUIView()
   }
 }
-
