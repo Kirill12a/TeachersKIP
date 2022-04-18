@@ -24,7 +24,6 @@
 		D2EE6E2F27FB712C00438D11 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */; };
 		D2EE6E3427FB838000438D11 /* DeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E3327FB838000438D11 /* DeveloperViewController.swift */; };
 		D2EE6E5E27FCDA9900438D11 /* URL_WORK.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E5D27FCDA9900438D11 /* URL_WORK.swift */; };
-		D2EE6E6A27FFFDB600438D11 /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E6927FFFDB600438D11 /* TestScreen.swift */; };
 		D2EE6E8E2801CE4900438D11 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE6E8D2801CE4900438D11 /* ScheduleViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +49,6 @@
 		D2EE6E2E27FB712C00438D11 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D2EE6E3327FB838000438D11 /* DeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperViewController.swift; sourceTree = "<group>"; };
 		D2EE6E5D27FCDA9900438D11 /* URL_WORK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_WORK.swift; sourceTree = "<group>"; };
-		D2EE6E6927FFFDB600438D11 /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
 		D2EE6E8D2801CE4900438D11 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		E153F531AAE689FF23F9B5C2 /* Pods_TableviewWithoutStroryboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableviewWithoutStroryboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -233,7 +231,6 @@
 		D2EE6E5A27FCD99D00438D11 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				D2EE6E6927FFFDB600438D11 /* TestScreen.swift */,
 				D2EE6E8D2801CE4900438D11 /* ScheduleViewController.swift */,
 			);
 			path = Schedule;
@@ -392,7 +389,6 @@
 				D2EE6E5E27FCDA9900438D11 /* URL_WORK.swift in Sources */,
 				D28895F3280A0EE20031DC8D /* NewsUIView.swift in Sources */,
 				D28895F12806163D0031DC8D /* TeacheModel.swift in Sources */,
-				D2EE6E6A27FFFDB600438D11 /* TestScreen.swift in Sources */,
 				D26F7DD52766560A009467B4 /* AppDelegate.swift in Sources */,
 				D26F7DD72766560A009467B4 /* SceneDelegate.swift in Sources */,
 			);

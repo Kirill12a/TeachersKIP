@@ -52,9 +52,10 @@ struct NewsUIView: View {
           
         }
       }
-      .navigationTitle("Courses")
+      .navigationTitle("Новости")
       .onAppear{
         viewModel.fetch()
+        print("fds")
       }
     }
   }

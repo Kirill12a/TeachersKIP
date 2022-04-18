@@ -30,7 +30,7 @@ class ViewModel: ObservableObject {
 
   @Published var courses: [Course] = []
   //https://api.npoint.io/ee9347a63ff438d21388
-  func fetch(){
+  open func fetch(){
     guard let url = URL(string: "https://api.npoint.io/ee9347a63ff438d21388") else {return}
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
       guard let data = data, error == nil else {return}

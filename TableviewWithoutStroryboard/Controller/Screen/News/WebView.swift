@@ -10,12 +10,11 @@ import WebKit
 
 struct WebView: UIViewRepresentable {
 
-
   var url: String
 
   func makeUIView(context: Context) -> some UIView {
     guard let url = URL(string: self.url) else {return WKWebView()}
-    let request = URLRequest(url: url)  
+    let request = URLRequest(url: url)
     let wkWebBiew = WKWebView()
     wkWebBiew.load(request)
     return wkWebBiew
