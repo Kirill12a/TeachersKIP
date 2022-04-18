@@ -12,7 +12,7 @@ class ScheduleViewController: UIViewController {
 
   var webView = WKWebView()
 
-//http://www.fa.ru/org/spo/kip/Documents/raspisanie/2021-2022/аудитории.pdf
+  //http://www.fa.ru/org/spo/kip/Documents/raspisanie/2021-2022/аудитории.pdf
   private func loadWEBView(){
     guard let url = URL(string: "https://github.com/Kirill12a/linkForTeacherApp-/files/8457524/default.pdf") else {return}
     webView.load(URLRequest(url: url))
@@ -21,7 +21,7 @@ class ScheduleViewController: UIViewController {
     // это было сделано для удаление loadView
     DispatchQueue.main.asyncAfter(deadline: .now()+2) { [self] in
       print("Не видно")
-//      loadsView.removeFromSuperview()
+      //      loadsView.removeFromSuperview()
     }
     view.addSubview(webView)
   }
@@ -35,7 +35,7 @@ class ScheduleViewController: UIViewController {
 
 
 
-//    view.addSubview(loadsView)
+    //    view.addSubview(loadsView)
 
 
     // Тестовая функция для получения данных

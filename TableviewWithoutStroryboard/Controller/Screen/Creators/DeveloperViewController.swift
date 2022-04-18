@@ -10,8 +10,8 @@ import SwiftUI
 
 struct DeveloperViewController: View {
   
-    var body: some View {
-      NavigationView{
+  var body: some View {
+    NavigationView{
       List{
         Section("Разработчки") {
           CellView(image: "test", positions: Position.TeamLead.rawValue, nickname: "Kiko", link_Profile: "https://github.com/Kirill12a")
@@ -32,13 +32,13 @@ struct DeveloperViewController: View {
 
       }.listRowSeparator(.visible) // мб change
 
-      .navigationTitle("Участники")
-        Spacer()
-
-      }
-      }
+        .navigationTitle("Участники")
+      Spacer()
 
     }
+  }
+
+}
 
 
 
@@ -80,7 +80,7 @@ struct CellView: View {
 
 
 struct TestViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        DeveloperViewController()
-    }
+  static var previews: some View {
+    DeveloperViewController()
+  }
 }
