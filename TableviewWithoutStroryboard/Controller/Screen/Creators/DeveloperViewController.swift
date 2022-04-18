@@ -41,19 +41,12 @@ struct DeveloperViewController: View {
 }
 
 
-
 enum Position: String{
   case TeamLead
   case Developer
   case Design
   case Ideas
 }
-
-
-
-
-
-
 
 struct CellView: View {
   @State var image:String
@@ -75,8 +68,6 @@ struct CellView: View {
     }
   }
 }
-
-
 
 
 struct TestViewController_Previews: PreviewProvider {

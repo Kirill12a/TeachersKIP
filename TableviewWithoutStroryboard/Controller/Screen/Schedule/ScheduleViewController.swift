@@ -10,7 +10,7 @@ import WebKit
 
 class ScheduleViewController: UIViewController {
 
-  var webView = WKWebView()
+  private var webView = WKWebView()
 
   //http://www.fa.ru/org/spo/kip/Documents/raspisanie/2021-2022/аудитории.pdf
   private func loadWEBView(){
@@ -26,18 +26,8 @@ class ScheduleViewController: UIViewController {
     view.addSubview(webView)
   }
 
-
-
-
   override func viewDidLoad() {
     super.viewDidLoad()
-
-
-
-
-    //    view.addSubview(loadsView)
-
-
     // Тестовая функция для получения данных
     let weekday = getDayOfWeek(today: "2022-04-10")
     print(weekday) // 1 = Wednesday
@@ -54,7 +44,7 @@ class ScheduleViewController: UIViewController {
     loadWEBView()
   }
 
-  func getDayOfWeek(today:String)->Int {
+ private func getDayOfWeek(today:String)->Int {
     let formatter  = DateFormatter()
     formatter.dateFormat = "yyyy-MM-dd"
     let todayDate = formatter.date(from: today)!

@@ -22,7 +22,6 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
     return table
   }()
 
-
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(tableView)
@@ -60,7 +59,6 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return view.bounds.size.height / 9
   }
-
 }
 
 
