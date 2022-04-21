@@ -19,9 +19,8 @@ class ScheduleViewController: UIViewController {
 
 
     // это было сделано для удаление loadView
-    DispatchQueue.main.asyncAfter(deadline: .now()+2) { [self] in
+    DispatchQueue.main.asyncAfter(deadline: .now()+2) {
       print("Не видно")
-      //      loadsView.removeFromSuperview()
     }
     view.addSubview(webView)
   }

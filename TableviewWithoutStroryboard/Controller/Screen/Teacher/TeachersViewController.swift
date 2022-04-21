@@ -59,6 +59,18 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return view.bounds.size.height / 9
   }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    alertWorking(indexPath: indexPath)
+  }
+
+  func alertWorking(indexPath: IndexPath)->UIAlertController{
+    let alert = UIAlertController(title: "\(array[indexPath.row].teacherName)", message: "1020 1120 920", preferredStyle: .alert)
+    let actionalert = UIAlertAction(title: "Понятно", style: .cancel)
+    alert.addAction(actionalert)
+    present(alert, animated: true)
+    return alert
+  }
 }
 
 
