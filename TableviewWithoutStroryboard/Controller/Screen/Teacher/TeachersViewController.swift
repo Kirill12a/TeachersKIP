@@ -12,7 +12,11 @@ import SDWebImage
 
 //TeachersViewController
 
-class TeachersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol AlertWork{
+  func alertWorking(indexPath: IndexPath)->UIAlertController
+}
+
+class TeachersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AlertWork {
 
   private var array: [WelcomeElement] = []
 
@@ -64,7 +68,7 @@ class TeachersViewController: UIViewController, UITableViewDelegate, UITableView
     alertWorking(indexPath: indexPath)
   }
 
-  func alertWorking(indexPath: IndexPath)->UIAlertController{
+   func alertWorking(indexPath: IndexPath)->UIAlertController{
     let alert = UIAlertController(title: "\(array[indexPath.row].teacherName)", message: "1020 1120 920", preferredStyle: .alert)
     let actionalert = UIAlertAction(title: "Понятно", style: .cancel)
     alert.addAction(actionalert)

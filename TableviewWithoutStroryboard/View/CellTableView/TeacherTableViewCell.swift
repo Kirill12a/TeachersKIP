@@ -17,7 +17,6 @@ class TableViewCell: UITableViewCell {
   lazy var imageTeacher: UIImageView = {
     var image = UIImageView()
     image.image = UIImage(named: "p")
-
     contentView.addSubview(image)
     return image
   }()
