@@ -12,7 +12,11 @@ import SDWebImage
 
 //TeachersViewController
 
-class TeachersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol AlertWork{
+  func alertWorking(indexPath: IndexPath)->UIAlertController
+}
+
+class TeachersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AlertWork {
 
   private var array: [WelcomeElement] = []
 
