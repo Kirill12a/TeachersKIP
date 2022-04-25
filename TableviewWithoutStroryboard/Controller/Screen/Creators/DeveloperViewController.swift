@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct DeveloperViewController: View {
   
   var body: some View {
@@ -34,7 +33,6 @@ struct DeveloperViewController: View {
 
         .navigationTitle("Участники")
       Spacer()
-
     }
   }
 
